@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="tatix" translate="label" sortOrder="140">
+            <label>Tatix</label>
+        </tab>
+        <section id="tatixconfig" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>General</label>
+            <tab>tatix</tab>
+            <resource>Tatix_Login::helloworld_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Claxson</label>
+                <field id="claxson_login_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Login url</label>
+                    <comment>Url de envio do token de login.</comment>
+                </field>
+                <field id="claxson_jwt_pass" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Senha JWT</label>
+                    <comment>Senha do token JWT.</comment>
+                </field>
+            </group>
+            <group id="general_toolbox" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Toolbox</label>
+                <field id="toolbox_login_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Uri</label>
+                    <comment>Uri de envio de requisição.</comment>
+                </field>
+                <field id="toolbox_chave_cp" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Chave CP</label>
+                    <comment>Chave Customer Provider.</comment>
+                </field>
+                <field id="toolbox_token" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Token</label>
+                    <comment>Token de acesso.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

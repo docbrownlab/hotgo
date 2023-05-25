@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Customer\Controller\Account\LoginPost">
+        <plugin disabled="false" name="loginAfter" sortOrder="10" type="Tatix\Login\Plugin\LoginPost"/>
+    </type>
+    <type name="Tatix\Login\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Tatix\Login\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">tatixLogger</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">Tatix\Login\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="Tatix\Login\Api\LoginInterface" type="Tatix\Login\Model\Api\Login"/>
+</config>

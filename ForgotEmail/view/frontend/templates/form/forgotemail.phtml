@@ -1,0 +1,27 @@
+<?php
+/** @var \Magento\Customer\Block\Account\Forgotemail $block */
+
+?>
+
+<form class="form email forget"
+      action="<?= $block->escapeUrl($block->getUrl('*/*/forgotemailpost')) ?>"
+      method="post"
+      id="form-validate"
+      data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset" data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>">
+        <div class="field note"><?= $block->escapeHtml(__('Please, enter your taxvat')) ?></div>
+        <div class="field taxvat required">
+            <label for="taxvat" class="label"><span><?= $block->escapeHtml(__('Taxvat')) ?></span></label>
+            <div class="control">
+                <input type="text" name="taxvat" alt="taxvat" id="taxvat" class="input-text" value="<?= $block->escapeHtmlAttr($block->getTaxvatValue()) ?>" data-mage-init='{"mage/trim-input":{}}' >
+            </div>
+        </div>
+        <div class="field note"><?= $block->escapeHtml(__("Don't forget to check your spam inbox")) ?></div>
+        <?= $block->getChildHtml('form_additional_info') ?>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary"><span><?= $block->escapeHtml(__('Send')) ?></span></button>
+        </div>
+    </div>
+</form>

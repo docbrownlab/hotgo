@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <tatixconfig>
+            <general>
+                <claxson_login_url>http://www.claxson.com.br/retornoLogin</claxson_login_url>
+                <claxson_jwt_pass>minha-senha</claxson_jwt_pass>
+            </general>
+            <general_toolbox>
+                <toolbox_login_url>http://api-cert.tbxnet.com/</toolbox_login_url>
+                <toolbox_chave_cp>hotgo_br</toolbox_chave_cp>
+                <toolbox_token>1ujtCLeSJfgpoenQvaC73RjP98ibijJ8</toolbox_token>
+            </general_toolbox>
+        </tatixconfig>
+    </default>
+</config>
